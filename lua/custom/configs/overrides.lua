@@ -46,6 +46,9 @@ M.mason = {
 
     -- python
     "pyright",
+
+    -- bash
+    "bash-language-server",
   },
 }
 
