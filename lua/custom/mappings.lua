@@ -19,6 +19,10 @@ M.disabled = {
     ["<leader>n"] = "",
     ["<leader>rn"] = "",
     ["<leader>ch"] = "",
+    -- ["<C-h>"] = "",
+    -- ["<C-j>"] = "",
+    -- ["<C-k>"] = "",
+    -- ["<C-l>"] = "",
 
     ---------------- lsp ----------------
     ["<leader>ls"] = "",
@@ -28,7 +32,7 @@ M.disabled = {
     ["<leader>q"] = "",
 
     ---------------- nvimtree ----------------
-    ["<C-n>"] = "",
+    -- ["<C-n>"] = "",
 
     ---------------- telescope ----------------
     ["<leader>fw"] = "",
@@ -48,7 +52,7 @@ M.disabled = {
 
 M.general = {
   n = {
-    ["<leader>s"] = { ":wall <CR>", "Save all" },
+    ["<leader>s"] = { ":wall <CR>", "Save all", opts = { silent = true } },
     ["<leader>y"] = { '"+y', "Copy to system" },
     ["<leader>cs"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
   }
@@ -105,7 +109,7 @@ M.nvimtree = {
 
 M.telescope = {
   plugin = true,
-  
+
   n = {
     ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
@@ -124,6 +128,19 @@ M.nvterm = {
       "Toggle floating term",
     },
   }
+}
+
+M.NvimTmuxNavigator = {
+  plugin = true,
+
+  n = {
+    ["<C-h>"] = { "<cmd> NvimTmuxNavigateLeft <CR>", "Move to left" },
+    ["<C-j>"] = { "<cmd> NvimTmuxNavigateDown <CR>", "Move to bellow" },
+    ["<C-k>"] = { "<cmd> NvimTmuxNavigateUp <CR>", "Move to above" },
+    ["<C-l>"] = { "<cmd> NvimTmuxNavigateRight <CR>", "Move to right" },
+    ["<C-\\>"] = { "<cmd> NvimTmuxNavigateLastActive <CR>", "Move to last active" },
+    ["<C-n>"] = { "<cmd> NvimTmuxNavigateNext <CR>", "Move to next" },
+  },
 }
 
 return M

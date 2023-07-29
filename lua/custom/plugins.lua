@@ -38,13 +38,16 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
+  -- nvim-tmux-navigation
   {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
+    "alexghergh/nvim-tmux-navigation",
+    init = function()
+      require("core.utils").load_mappings "NvimTmuxNavigator"
     end,
+    config = function(_, opts)
+      require("nvim-tmux-navigation").setup(opts)
+    end,
+    lazy = false,
   },
 
   -- To make a plugin not be loaded
