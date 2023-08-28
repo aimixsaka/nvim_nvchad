@@ -39,6 +39,7 @@ local plugins = {
   },
 
   -- nvim-tmux-navigation
+  -- seems to have a bug on key <C-V>
   {
     "alexghergh/nvim-tmux-navigation",
     init = function()
@@ -49,6 +50,18 @@ local plugins = {
     end,
     lazy = false,
   },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    config = function()
+      dofile(vim.g.base46_cache .. "whichkey")
+      require "custom.configs.whichkey"
+    end,
+  },
+  -- {
+  --   'christoomey/vim-tmux-navigator',
+  -- }
 
   -- To make a plugin not be loaded
   -- {

@@ -52,9 +52,12 @@ M.disabled = {
 
 M.general = {
   n = {
-    ["<leader>s"] = { ":wall <CR>", "Save all", opts = { silent = true } },
-    ["<leader>y"] = { '"+y', "Copy to system" },
+    ["<leader><Space>"] = { ":wall <CR>", "Save all", opts = { silent = true } },
     ["<leader>cs"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
+  },
+
+  v = {
+    ["<leader>y"] = { '"+y', "Copy to system" },
   }
 }
 
@@ -138,8 +141,8 @@ M.NvimTmuxNavigator = {
     ["<C-j>"] = { "<cmd> NvimTmuxNavigateDown <CR>", "Move to bellow" },
     ["<C-k>"] = { "<cmd> NvimTmuxNavigateUp <CR>", "Move to above" },
     ["<C-l>"] = { "<cmd> NvimTmuxNavigateRight <CR>", "Move to right" },
-    ["<C-\\>"] = { "<cmd> NvimTmuxNavigateLastActive <CR>", "Move to last active" },
-    ["<C-n>"] = { "<cmd> NvimTmuxNavigateNext <CR>", "Move to next" },
+    -- ["<C-\\>"] = { "<cmd> NvimTmuxNavigateLastActive <CR>", "Move to last active" },
+    -- ["<C-n>"] = { "<cmd> NvimTmuxNavigateNext <CR>", "Move to next" },
   },
 }
 
