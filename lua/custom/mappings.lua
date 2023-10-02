@@ -58,7 +58,11 @@ M.general = {
 
   v = {
     ["<leader>y"] = { '"+y', "Copy to system" },
-  }
+  },
+
+  i = {
+    ["<CR>"] = { "<C-g>u<CR>", "" },
+  },
 }
 
 M.lspconfig = {

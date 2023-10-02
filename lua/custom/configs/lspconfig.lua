@@ -3,8 +3,21 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
+-- hack
+-- FIX warning: multiple different client offset_encodings detected for buffer
+capabilities.offsetEncoding = 'utf-8'
+
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "gopls", "pyright", "bashls", }
+local servers = {
+  "html",
+  "cssls",
+  "tsserver",
+  "clangd",
+  "rust_analyzer",
+  "gopls",
+  "pyright",
+  "bashls",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,5 +26,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- 
--- lspconfig.pyright.setup { blabla}
+-- nix language server
+lspconfig.nixd.setup {
+
+}
+
+

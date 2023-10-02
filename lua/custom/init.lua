@@ -19,3 +19,5 @@ opt.number = true
 opt.background = "dark"
 opt.timeoutlen = 300
 
+-- opt.timeoutlen=1000
+opt.ttimeoutlen=5
