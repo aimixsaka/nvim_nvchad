@@ -20,4 +20,7 @@ opt.background = "dark"
 opt.timeoutlen = 300
 
 -- opt.timeoutlen=1000
-opt.ttimeoutlen=5
+opt.ttimeoutlen = 5
+
+-- set lines jump for C-u and C-d
+opt.scroll = 10
